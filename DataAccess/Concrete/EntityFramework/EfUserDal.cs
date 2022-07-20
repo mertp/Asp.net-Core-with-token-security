@@ -2,7 +2,7 @@
 using Core.Entities.Concrete;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework.Contexts;
-using Entities.Concrete;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,12 +19,13 @@ namespace DataAccess.Concrete.EntityFramework
             using (var context = new NorthWindContext())
             {
                 //Join Operation for user operation claims
-                var result = from operationClaim in context.OperationClaims
-                             join UserOperationClaim in context.UserOperations
-                             on operationClaim.Id equals UserOperationClaim.OperationClaimId
-                             where UserOperationClaim.UserId == user.Id
-                             select new OperationClaim { Id = operationClaim.Id, Name = operationClaim.Name };
+                var result = from operationClaims in context.OperationClaim
+                             join UserOperationsClaim in context.UserOperationClaim
+                             on operationClaims.Id equals UserOperationsClaim.OperationClaimId
+                             where UserOperationsClaim.UserId == user.Id
+                             select new OperationClaim { Id = operationClaims.Id, Name = operationClaims.Name };
                 return result.ToList();
+            }
         }
     }
 }

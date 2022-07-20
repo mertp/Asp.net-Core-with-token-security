@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{7B8C42D1-953B-4AA9-82F1-47F8F0CA266B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApıLayer", "WebApıLayer\WebApıLayer.csproj", "{D9F900E3-0D32-4896-951A-2F56C2408303}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiLayer", "WebApıLayer\WebApiLayer.csproj", "{D9F900E3-0D32-4896-951A-2F56C2408303}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

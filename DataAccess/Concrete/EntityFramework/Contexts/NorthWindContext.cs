@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Entities.Concrete;
+
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -19,10 +20,9 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
            
         }
         //Mapping the table
-        public DbSet<Product> Products { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<UserOperationClaim> UserOperations { get; set; }
-        public DbSet<OperationClaim> OperationClaims { get; set; }
+       
+        public DbSet<User> User { get; set; }
+        public DbSet<UserOperationClaim> UserOperationClaim { get; set; }
+        public DbSet<OperationClaim> OperationClaim { get; set; }
     }
 }
